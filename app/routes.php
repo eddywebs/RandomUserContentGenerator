@@ -13,6 +13,12 @@
 
 Route::get('/', function()
 {
+	return View::make('homepage');
+	//return View::make('hello');
+});
+
+Route::get('/content_generator', function()
+{
 	return View::make('hello');
 });
 
