@@ -5,6 +5,10 @@
 
 ## Description
 A tool that generates dummy content (lorem ipsum) or fictious person for online profiles (including date of bith, address, username, password).
+It also includes Json api by changing type paramater in urls from "html" to "json"
+for e.g.
+switch ../fakePerson?count=1&type=html
+to     ../fakePerson?count=1&type=json
 
 ## Demo
 I'll be attending my Thursday section with nick to do an in-person demo.

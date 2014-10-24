@@ -34,6 +34,10 @@ Route::get('/fakeContent', function()
 	    $paragraphs = implode('<p>', $generator->getParagraphs($num));
     }
     $data=array("content"=>$paragraphs, "num"=>$num);
+        //api to return as json object
+    if (Input::get('type')=="json")
+    	return json_encode($data);
+    
 	return View::make('fakeContent', $data);//->with('content', $paragraphs, 'num');
 });
 
@@ -90,7 +94,11 @@ Route::get('/fakePerson', function()
 }
 
 	$data=array("profiles"=>$profiles, "count"=>$count, "validationMessage"=>$validationMessage);
-    //echo Pre::render($data,'Fruit');
+    
+    //api to return as json object
+    if (Input::get('type')=="json")
+    	return json_encode($data);
+
 	return View::make('fakePerson')->with('data', $data);
 	//return View::make('fakePerson', $data);
 });
