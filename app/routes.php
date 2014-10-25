@@ -36,8 +36,8 @@ Route::get('/fakeContent', function()
     $data=array("content"=>$paragraphs, "num"=>$num);
         //api to return as json object
     if (Input::get('type')=="json")
-    	return json_encode($data);
-    
+    	return json_encode($data["content"]);
+
 	return View::make('fakeContent', $data);//->with('content', $paragraphs, 'num');
 });
 
@@ -97,7 +97,7 @@ Route::get('/fakePerson', function()
     
     //api to return as json object
     if (Input::get('type')=="json")
-    	return json_encode($data);
+    	return json_encode($data["profiles"]);
 
 	return View::make('fakePerson')->with('data', $data);
 	//return View::make('fakePerson', $data);
