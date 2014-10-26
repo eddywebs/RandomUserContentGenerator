@@ -27,7 +27,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -41,21 +40,24 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./">Home</a></li>
-            <li><a href="./fakeContent">Content Generator</a></li>
-            <li><a href="./fakePerson">Profile Generator</a></li>
+            <li class="{{Request::path() == '/' ? 'active' : '';}}"><a href="./">Home</a></li>
+            <li class="{{Request::path() == 'fakeContent' ? 'active' : '';}}"><a href="./fakeContent">Content Generator</a></li>
+            <li class="{{Request::path() == 'fakePerson' ? 'active' : '';}}"><a href="./fakePerson">Profile Generator</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
     <div class="container">
-
-      
         @yield('content')
 
     </div><!-- /.container -->
-
+<footer>
+      <div class="container">
+        <p class="muted credit">Created by eddywebs 
+            <a href="https://github.com/eddywebs/RandomUserContentGenerator">Source code available at Github.</a></p>
+      </div>
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

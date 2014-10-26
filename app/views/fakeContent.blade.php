@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('title')
-	Generate fake content - Lorem ipsum.
+	Fake content /Lorem ipsum generator
 @stop
 
 @section('content')
@@ -19,6 +19,7 @@
 		 	{{ Form::hidden('type', 'html') }}
 			{{Form::submit('Gimme Content!', array('class' => 'btn btn-success'))}}
 			{{ Form::close() }}
+		<h2 style="color: red">{{ $validationMessage }}</h2>
 	</div>
 </div>
 <p>

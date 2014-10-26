@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('title')
-	Generate fictional person.
+	Fake profile generator.
 @stop
 
 @section('content')

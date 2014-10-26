@@ -24,16 +24,20 @@ Route::get('/fakeContent', function()
 	//default the number of paras to 1 if page is called outside form submission
 	if($num==null)
 		$num='1';
-
+	$validationMessage=null;
+	$paragraphs='';
 	//basic form error checking
 	if(ctype_digit($num)==false || $num>9)
-		$paragraphs="<b>A valid number < 9 is requred for number of paras. You entered: $num </b>";
+		{
+			$validationMessage="A valid number < 9 is requred for number of paras. You entered: $num";
+			$num='0';
+		}
 	else
 	{
 		$generator = new Badcow\LoremIpsum\Generator();
 	    $paragraphs = implode('<p>', $generator->getParagraphs($num));
     }
-    $data=array("content"=>$paragraphs, "num"=>$num);
+    $data=array("content"=>$paragraphs, "num"=>$num, "fakeContentNavClass"=>'active', "validationMessage"=>$validationMessage);
         //api to return as json object
     if (Input::get('type')=="json")
     	return json_encode($data["content"]);
