@@ -11,7 +11,7 @@ switch ../fakePerson?count=1&type=html
 to     ../fakePerson?count=1&type=json
 
 ## Demo
-I'll be attending my Thursday section with nick to do an in-person demo.
+Demo available online at: http://youtu.be/RzGbDCACBm4
 
 ## Details for teaching team
 No login required.
