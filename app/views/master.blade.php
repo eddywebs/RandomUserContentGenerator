@@ -52,12 +52,12 @@
         @yield('content')
 
     </div><!-- /.container -->
-<footer>
+<div class="footer">
       <div class="container">
-        <p class="muted credit">Created by eddywebs 
+        <p>Created by eddywebs 
             <a href="https://github.com/eddywebs/RandomUserContentGenerator">Source code available at Github.</a></p>
       </div>
-</footer>
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

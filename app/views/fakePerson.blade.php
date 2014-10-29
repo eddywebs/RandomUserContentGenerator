@@ -21,8 +21,9 @@
 		<h2 style="color: red">{{ $data['validationMessage'] }}</h2>
 	</div>
 </div>
+<p>
 	@foreach ($data['profiles'] as $person)
-		<b>{{ $person->firstName }} {{ $person->lastName }}</b>
+		<div><b>{{ $person->firstName }} {{ $person->lastName }}</b></div>
 		<div>{{ $person->dob }}</div>
 		<div>{{ $person->streetAddress }}<div>
 		<div>{{ $person->city }}, {{ $person->state }} {{ $person->zip }}<div>
@@ -32,4 +33,5 @@
 		<div>{{ $person->description }}</div>
 		<br>
 	@endforeach
+</p>
 @stop
