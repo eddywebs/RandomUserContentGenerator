@@ -14,7 +14,7 @@
 		<div class="control-group">
 			
 			{{ Form::label('paras', 'Number of Para(s)  ', array('class' => 'name') ) }}
-		 	{{ Form::number('paras', $num, array('maxlength'=>1)) }} (Max 9)
+		 	{{ Form::number('paras', $num)}} (Max 9)
 		 </div>
 		 	{{ Form::hidden('type', 'html') }}
 			{{Form::submit('Gimme Content!', array('class' => 'btn btn-success'))}}

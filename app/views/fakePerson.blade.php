@@ -13,7 +13,7 @@
 		{{ Form::open(array('url' => 'fakePerson', 'method' => 'GET')) }}
 		<div class="control-group">
 			{{ Form::label('count', 'Number of profiles  ', array('class' => 'name') ) }}
-		 	{{ Form::number('count', $data['count'], array('maxlength'=>2)) }} (Max 99)
+		 	{{ Form::number('count', $data['count']) }} (Max 99)
 		 </div>
 		 	{{ Form::hidden('type', 'html') }}
 			{{Form::submit('Fetch new person', array('class' => 'btn btn-success'))}}
